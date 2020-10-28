@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ServiceOneService } from '../service-one.service';
 
 @Component({
   selector: 'app-child',

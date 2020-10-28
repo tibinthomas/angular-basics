@@ -5,5 +5,6 @@ I am root component {{dataFromChild}}
 
 <app-other-c-one></app-other-c-one>
 
-<input type="text" [(ngModel)]="val">
+
+<input type="text" [(ngModel)]="val" (input)="handlechangeintextbox()">
 {{val}}

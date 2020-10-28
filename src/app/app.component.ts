@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceOneService } from './service-one.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'test';
 
+  constructor(private service: ServiceOneService) {
+  }
+
+  ngOnInit() {
+    console.log('parent created')
+
+    this.service.val.next(6);
+  }
+
   dataFromChild;
 
   forch2 ='child2';
@@ -16,5 +26,11 @@ export class AppComponent {
 
   handleClickEvent(data) {
     this.dataFromChild = data;
+    this.service.val.next(data);
+    console.log(this.val);
+  }
+
+  handlechangeintextbox(){
+    this.service.val.next(this.val);
   }
 }
