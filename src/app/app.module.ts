@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 import { ChildTwoComponent } from './child-two/child-two.component';
+import { FormsModule } from '@angular/forms';
+import { OtherModule } from './other/other.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { ChildTwoComponent } from './child-two/child-two.component';
     ChildTwoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    OtherModule
   ],
   providers: [],
   bootstrap: [AppComponent]
