@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test';
+
+  dataFromChild;
+
+  forch2 ='child2';
+  // set
+
+  handleClickEvent(data) {
+    this.dataFromChild = data;
+  }
 }
