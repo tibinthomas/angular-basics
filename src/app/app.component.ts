@@ -11,6 +11,7 @@ export class AppComponent {
   dataFromChild;
 
   forch2 ='child2';
+  val = 1000;
   // set
 
   handleClickEvent(data) {
