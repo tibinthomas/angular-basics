@@ -11,7 +11,6 @@ export class OtherCOneComponent implements OnInit {
   constructor(public service: ServiceOneService) { }
 otherval = 5;
   ngOnInit(): void {
-    this.service.val.subscribe(x=>this.otherval=x)
   }
 
 }

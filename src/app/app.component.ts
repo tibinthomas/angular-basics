@@ -9,13 +9,15 @@ import { ServiceOneService } from './service-one.service';
 export class AppComponent {
   title = 'test';
 
+  // date = new Date();
+
   constructor(private service: ServiceOneService) {
   }
 
   ngOnInit() {
     console.log('parent created')
 
-    this.service.val.next(6);
+    this.service.handleChangeInInput(this.val);
   }
 
   dataFromChild;
@@ -26,11 +28,11 @@ export class AppComponent {
 
   handleClickEvent(data) {
     this.dataFromChild = data;
-    this.service.val.next(data);
+    this.service.handleChangeInInput(this.val);
     console.log(this.val);
   }
 
   handlechangeintextbox(){
-    this.service.val.next(this.val);
+    this.service.handleChangeInInput(this.val);
   }
 }

@@ -16,7 +16,7 @@ export class ChildTwoComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('chils created')
-    this.service.val.subscribe(x => {
+    this.service.val$.subscribe(x => {
       console.log(x);
       this.val = x;
       console.log(x);
